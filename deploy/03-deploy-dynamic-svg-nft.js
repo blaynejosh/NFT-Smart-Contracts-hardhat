@@ -14,7 +14,7 @@ module.exports = async function ({ getNamedAccounts, deployments }) {
         const EthUsdAggregator = await ethers.getContract("MockV3Aggregator")
         ethUsdPriceFeedAddress = EthUsdAggregator.address
     } else {
-        ethUsdPriceFeedAddress = networkConfig[chainId].ethUsdPricefeed
+        ethUsdPriceFeedAddress = networkConfig[chainId].ethUsdPriceFeed
     }
 
     log("-------------------------------------------------------")
