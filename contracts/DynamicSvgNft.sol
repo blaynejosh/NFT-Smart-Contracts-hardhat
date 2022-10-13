@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
 import "base64-sol/base64.sol";
 
-contract DynamiSvgNft is ERC721 {
+contract DynamicSvgNft is ERC721 {
     // mint function
     //store SVG information somewhere
     // some logic to say "Show X Image or show Y Image"
