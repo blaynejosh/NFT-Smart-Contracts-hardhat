@@ -19,12 +19,12 @@ module.exports = async function ({ getNamedAccounts, deployments }) {
 
     log("-------------------------------------------------------")
 
-    const daySvg = await fs.readFileSync("./images/dynamicSvgNft/daySVG.svg", { encoding: "utf8" })
-    const nightSvg = await fs.readFileSync("./images/dynamicSvgNft/nightSVG.svg", {
+    const daySvg = fs.readFileSync("./images/dynamicSvgNft/daySVG.svg", { encoding: "utf8" })
+    const nightSvg = fs.readFileSync("./images/dynamicSvgNft/nightSVG.svg", {
         encoding: "utf8",
     })
 
-    args = [ethUsdPriceFeedAddress, daySvg, nightSvg]
+    const args = [ethUsdPriceFeedAddress, daySvg, nightSvg]
     const dynamicSvgNft = await deploy("DynamicSvgNft", {
         from: deployer,
         log: true,
